@@ -5,26 +5,13 @@ SetTitleMatchMode 2
 #PgUp:: 
 
 {
-  DetectHiddenWindows, On 
-  ControlSend, ahk_parent, ^{Left}, ahk_class SpotifyMainWindow 
-  DetectHiddenWindows, Off 
+  Send {Media_Prev} 
   return 
 }
 
 ; "Win + PageDown"  for next 
 #PgDn:: 
 { 
-  DetectHiddenWindows, On 
-  ControlSend, ahk_parent, ^{Right}, ahk_class SpotifyMainWindow 
-  DetectHiddenWindows, Off 
+  Send {Media_Next}
   return 
-} 
-
-; "Win + Insert"  for pause
-#Insert::
-{ 
-  DetectHiddenWindows, On 
-  ControlSend, ahk_parent, {space}, ahk_class SpotifyMainWindow 
-  DetectHiddenWindows, Off 
-  return 
-} 
+}
